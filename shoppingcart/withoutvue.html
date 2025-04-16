@@ -1,0 +1,20 @@
+<div id="app">
+  <span>{{ count }}</span>
+  <!-- Automatically updates when `count` changes -->
+  <button @click="increment">Increment</button>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+<script>
+  new Vue({
+    el: "#app",
+    data: {
+      count: 0, // Reactive data
+    },
+    methods: {
+      increment() {
+        this.count++; // Vue automatically updates the UI
+      },
+    },
+  });
+</script>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: rgb(157, 128, 128);
+        display: flex;
+        justify-content: center;
+      }
+      @keyframes colorAnimation {
+        0% {
+          background-color: #3498db;
+        }
+        50% {
+          background-color: #e74c3c;
+        }
+        100% {
+          background-color: #3498db;
+        }
+      }
+
+      .keyframe-animation {
+        color: white;
+        padding: 20px;
+        text-align: center;
+        animation: colorAnimation 3s infinite; /* Runs the animation indefinitely */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="keyframe-animation">Animating Colors!</div>
+  </body>
+</html>

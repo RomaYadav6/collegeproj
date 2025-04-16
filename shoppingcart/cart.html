@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background: linear-gradient(195deg, black, aqua, gray);
+        color: aliceblue;
+        height: 100vh;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: xx-large;
+        /* border: 10px solid rgb(69, 225, 225); */
+        padding: 0px;
+        margin: 0px;
+      }
+      .productc {
+        background-color: black;
+        border: 0.5px solid aqua;
+        padding: 5px;
+        border-radius: 5px;
+        color: aqua;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .container {
+        background-color: rgb(76, 73, 73);
+        padding: 20px;
+        border: 10px solid rgb(16, 210, 224);
+        border-radius: 10px;
+        width: 600px;
+      }
+
+      #cart-total {
+        margin-top: 10px;
+      }
+      button {
+        padding: 10px;
+        background-color: rgb(69, 225, 225);
+        border-radius: 5px;
+        justify-content: flex-end;
+      }
+      header {
+        padding: 20px;
+        text-align: center;
+        color: aqua;
+        font-weight: bolder;
+        font-size: xx-large;
+      }
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Products</h1>
+      <div id="product-list"></div>
+      <h2>Shopping cart</h2>
+      <div id="cart-items">
+        <p id="empty-cart">Your cart is empty</p>
+      </div>
+      <div id="cart-total" class="hidden">
+        <p>Total:<span id="total-price">$0.00</span></p>
+        <button id="checkout-btn">Checkout</button>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

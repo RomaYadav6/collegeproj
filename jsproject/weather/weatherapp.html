@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WEATHER_APP</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: azure;
+        background: linear-gradient(180deg, rgb(129, 129, 206), white);
+      }
+      button {
+        background-color: blueviolet;
+        color: aliceblue;
+        padding: 10px;
+        border-radius: 5px;
+      }
+      .container {
+        display: block;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgba(96, 18, 96, 0.217);
+        border: 5px solid rgba(255, 192, 203, 0.352);
+        padding: 20px;
+        border-radius: 5px;
+        /* filter: blur(5px); */
+      }
+      input {
+        padding: 10px;
+        border-radius: 5px;
+        background-color: rgb(211, 203, 203);
+      }
+      .hidden {
+        display: none; /* CSS to hide elements with the hidden class */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>WEATHER DATA</h1>
+      <div class="input-container">
+        <input type="text" id="city-input" placeholder="City name" />
+        <button id="search-btn">Search</button>
+      </div>
+      <div id="weather-info" class="hidden">
+        <h2 style="text-align: center">Weather Data</h2>
+        <h2 id="city-name"></h2>
+        <p id="temp"></p>
+        <p id="description"></p>
+      </div>
+      <p id="error-message" class="hidden">City not found. Please try again</p>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

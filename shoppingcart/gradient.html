@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gradient Border</title>
+    <style>
+      body {
+        background-color: black;
+        color: aliceblue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        font-size: xx-large;
+      }
+
+      .container {
+        padding: 20px;
+        border-radius: 10px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .container::before {
+        content: "";
+        position: absolute;
+        top: -5px;
+        left: -5px;
+        right: -5px;
+        bottom: -5px;
+        background: linear-gradient(90deg, aqua, pink, yellow, aqua);
+        z-index: -1;
+        border-radius: 10px;
+      }
+
+      .container > * {
+        position: relative;
+        z-index: 1;
+        background: rgb(79, 77, 77); /* Inner background color */
+        padding: 20px;
+        border-radius: 10px;
+      }
+
+      .container::after {
+        content: "";
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        right: 5px;
+        bottom: 5px;
+        background-color: rgb(79, 77, 77); /* Inner background color */
+        z-index: 0;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Gradient Border Example</h1>
+      <p>This container has a gradient border effect.</p>
+    </div>
+  </body>
+</html>

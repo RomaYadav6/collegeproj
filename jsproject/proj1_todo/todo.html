@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TODO</title>
+  </head>
+  <style>
+    html,
+    body {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: azure;
+      background-color: black;
+    }
+    button {
+      background-color: blueviolet;
+      color: aliceblue;
+      padding: 10px;
+      border-radius: 5px;
+    }
+    .container {
+      display: block; /* or display: grid; */
+      justify-content: center;
+      align-items: center;
+      background-color: rgb(177, 166, 166);
+      border: 5px solid rgb(81, 145, 201);
+      padding: 10px;
+    }
+
+    input {
+      padding: 10px;
+      border-radius: 5px;
+      background-color: rgb(160, 156, 156);
+    }
+    ul {
+      list-style-type: none;
+      padding: 0px;
+    }
+    li {
+      display: flex;
+      padding: 0px;
+      background-color: gray;
+      padding: 5px;
+      border-radius: 2px;
+      justify-content: space-between;
+      align-items: center;
+      font-size: large;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <h1>TO-DO List</h1>
+      <div class="input-conatiner">
+        <input type="text" id="todo-input" placeholder="add tasks here" />
+        <button id="add-task-btn">Add Task</button>
+      </div>
+      <ul id="to-list"></ul>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
